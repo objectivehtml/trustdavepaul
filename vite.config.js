@@ -15,11 +15,6 @@ export default defineConfig({
       }
     },
     assetsInlineLimit: 4096, // Inline assets smaller than 4kb
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-      }
-    }
+    minify: 'esbuild', // Use esbuild (default, faster than terser)
   }
 })
