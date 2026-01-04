@@ -32,10 +32,13 @@
         
         <link rel="canonical" href="https://trustdavepaul.com/" />
         <meta name="theme-color" content="#1e3a8a" /> <!-- campaign-blue -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap');
         </style>
-        <link rel="preload" as="image" href="./assets/hero_optimized.webp" fetchpriority="high">
+        <link rel="preload" as="image" href="./assets/hero_mobile.webp" media="(max-width: 768px)" fetchpriority="high">
+        <link rel="preload" as="image" href="./assets/hero_optimized.webp" media="(min-width: 769px)" fetchpriority="high">
     </head>
     <body class="bg-gray-50 text-slate-800 antialiased font-sans">
         <a href="#main" class="skip-link">Skip to main content</a>
@@ -86,6 +89,7 @@
             <section class="relative py-12 min-h-screen flex items-center justify-center overflow-hidden">
                 <div class="absolute inset-0 z-0">
                     <picture>
+                        <source media="(max-width: 768px)" srcset="./assets/hero_mobile.webp" type="image/webp">
                         <source srcset="./assets/hero_optimized.webp" type="image/webp">
                         <img src="./assets/hero_optimized.jpg" alt="Teller County Landscape" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-[2000ms]" fetchpriority="high" />
                     </picture>
@@ -108,7 +112,7 @@
                         <p class="text-base sm:text-lg md:text-xl text-gray-100 font-light mb-8 sm:mb-12 drop-shadow-md animate-slide-up leading-relaxed max-w-2xl" style="animation-delay: 0.2s;">
                             Dave is a proven conservative leader focused on protecting our heritage, ensuring public safety, and building a stronger future for every family. He stands for strict fiscal responsibility, <span class="text-campaign-gold font-bold">Constitutional freedoms</span>, and defending Teller County from state-level overreach.
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-slide-up" style="animation-delay: 0.4s;">
+                        <div class="flex flex-col md:flex-row gap-3 md:gap-4 animate-slide-up" style="animation-delay: 0.4s;">
                             <a href="#about" class="px-8 sm:px-10 py-4 sm:py-5 bg-campaign-gold hover:bg-yellow-500 text-campaign-blue font-bold rounded-lg shadow-lg hover:shadow-xl transition-all text-lg sm:text-xl border-b-4 border-yellow-600 active:border-b-0 active:translate-y-1 text-center w-full sm:w-auto">
                                 Meet Dave
                             </a>
