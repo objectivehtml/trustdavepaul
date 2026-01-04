@@ -8,6 +8,8 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap">
+        <link rel="preload" as="image" href="./assets/hero_new.png" fetchpriority="high">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body class="bg-gray-50 text-slate-800 antialiased font-sans">
@@ -57,20 +59,22 @@
             <!-- Hero Section -->
             <section class="relative h-screen flex items-center justify-center overflow-hidden">
                 <div class="absolute inset-0 z-0">
-                    <img src="./assets/hero_new.png" alt="Teller County Landscape" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-[2000ms]" />
+                    <img src="./assets/hero_new.png" alt="Teller County Landscape" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-[2000ms]" fetchpriority="high" />
                     <div class="absolute inset-0 bg-gradient-to-r from-campaign-blue/90 via-campaign-blue/50 to-transparent mix-blend-multiply"></div>
                     <div class="absolute inset-0 bg-linear-to-t from-gray-900/50 to-transparent"></div>
                 </div>
                 <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left pt-20">
                     <div class="md:max-w-3xl">
-                        <div class="inline-block px-4 py-1.5 mb-8 bg-campaign-gold/20 backdrop-blur-sm border border-campaign-gold/40 rounded-full animate-fade-in">
-                            <span class="text-campaign-gold font-bold uppercase tracking-widest text-xs md:text-sm">Vote Dave Paul 2026</span>
+                        <div class="inline-block px-4 py-1.5 mb-8 bg-campaign-gold/10 backdrop-blur-sm border border-campaign-gold/30 rounded-full animate-fade-in shadow-sm">
+                            <span class="text-white font-bold uppercase tracking-widest text-xs md:text-sm drop-shadow-md">Vote Dave Paul 2026</span>
                         </div>
                         <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg tracking-tight leading-tight animate-slide-up font-serif"> Common Sense Leadership <br class="hidden md:block" />
                             <span class="text-campaign-gold italic">for Teller County</span>
                         </h1>
                         <div class="text-xl md:text-2xl font-bold text-white mb-8 drop-shadow-md animate-slide-up font-sans tracking-wide uppercase" style="animation-delay: 0.1s;"> Dave Paul for <span class="text-campaign-gold">Commissioner</span> </div>
-                        <p class="mt-4 text-xl text-gray-100 font-light mb-12 drop-shadow-md animate-slide-up leading-relaxed max-w-2xl" style="animation-delay: 0.2s;"> Focused on protecting our heritage, ensuring public safety, and building a stronger future for every family. Dave stands for strict fiscal responsibility and the individual freedoms that define our way of life in the mountains. </p>
+                        <p class="mt-4 text-xl text-gray-100 font-light mb-12 drop-shadow-md animate-slide-up leading-relaxed max-w-2xl" style="animation-delay: 0.2s;">
+                            Dave is a proven conservative leader focused on protecting our heritage, ensuring public safety, and building a stronger future for every family. He stands for strict fiscal responsibility, <span class="text-campaign-gold font-bold">Constitutional freedoms</span>, and defending Teller County from state-level overreach.
+                        </p>
                         <div class="flex flex-col sm:flex-row gap-4 animate-slide-up" style="animation-delay: 0.4s;">
                             <a href="#about" class="px-10 py-5 bg-campaign-gold hover:bg-yellow-500 text-campaign-blue font-bold rounded-lg shadow-lg hover:shadow-xl transition-all text-xl border-b-4 border-yellow-600 active:border-b-0 active:translate-y-1 text-center w-full sm:w-auto"> Meet Dave </a>
                             <a href="#vision" class="px-10 py-5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg backdrop-blur-md transition-all text-xl border border-white/30 text-center w-full sm:w-auto hover:backdrop-blur-lg"> The Platform </a>
@@ -86,7 +90,7 @@
                             <div class="absolute -top-10 -left-10 w-64 h-64 bg-campaign-gold/20 rounded-full blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
                             <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-campaign-blue/10 rounded-full blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
                             <div class="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/5 group-hover:rotate-0 transition-transform duration-500">
-                                <img src="./assets/HeadShot2024.jpg" alt="Dave Paul" class="w-full object-cover aspect-[4/5] group-hover:scale-105 transition-transform duration-500" />
+                                <img src="./assets/HeadShot2024.jpg" alt="Dave Paul" class="w-full object-cover aspect-[4/5] group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                             </div>
                             <!-- Floating Quote Card -->
                             <div class="hidden md:block absolute -bottom-6 -right-6 lg:-right-12 bg-white p-6 rounded-xl shadow-xl border-l-4 border-campaign-gold max-w-xs">
@@ -101,17 +105,26 @@
                             </div>
                             <h2 class="text-4xl md:text-5xl font-bold text-campaign-blue mb-6 font-serif leading-tight"> Deep Roots, <br />Proven Integrity </h2>
                             <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
-                                <p> Dave Paul has been a dedicated member of the Teller County community for over three decades. His commitment to this region isn't just about policy—it's personal. He's raised his family here, built a business here, and embodies the vibrant Colorado lifestyle. </p>
-                                <p> With a background in small business and years of local service, Daveunderstands that government should work <em>for</em> the people, not simply be an obstacle in their path. </p>
-                            </div>
+                            <p>
+                                Dave Paul has been a consistent conservative voice in Teller County for over three
+                                decades. His commitment to this region isn't just about policy—it's a promise to protect
+                                the values that make our community unique. Raising his family and building several
+                                businesses here, Dave understands that Teller County isn't just a place to live; it's a
+                                way of life worth defending.
+                            </p>
+                            <p>
+                                With a foundation in private-sector success and years of public service, Dave
+                                believes government should stay small, stay local, and stay out of your way. He is a
+                                firm believer in <span class="text-slate-900 font-bold underline decoration-campaign-gold decoration-2 underline-offset-4">property rights, the Second Amendment, and limited government</span>.
+                            </p></div>
                             <div class="mt-10 grid grid-cols-2 gap-6">
                                 <div class="border-l-2 border-gray-200 pl-4">
                                     <span class="block text-3xl font-bold text-campaign-gold">30+</span>
-                                    <span class="text-sm text-slate-500 font-medium uppercase">Years in Teller County</span>
+                                    <span class="text-sm text-slate-600 font-medium uppercase">Years in Teller County</span>
                                 </div>
                                 <div class="border-l-2 border-gray-200 pl-4">
                                     <span class="block text-3xl font-bold text-campaign-gold">Small Biz</span>
-                                    <span class="text-sm text-slate-500 font-medium uppercase">Owner & Operator</span>
+                                    <span class="text-sm text-slate-600 font-medium uppercase">Owner & Operator</span>
                                 </div>
                             </div>
                             <div class="mt-10">
@@ -134,7 +147,7 @@
                         <div class="w-full lg:w-1/2 order-2 lg:order-1">
                             <div class="relative">
                                 <div class="absolute -inset-4 bg-white/50 rounded-[2.5rem] backdrop-blur-sm -z-10 shadow-inner"></div>
-                                <img src="./assets/FB_IMG_1767190374070.jpg" alt="Dave enjoying a Broncos game" class="rounded-[2rem] shadow-2xl w-full aspect-[4/5] object-cover border-4 border-white hover:scale-105 transition-transform duration-500" />
+                                <img src="./assets/FB_IMG_1767190374070.jpg" alt="Dave enjoying a Broncos game" class="rounded-[2rem] shadow-2xl w-full aspect-[4/5] object-cover border-4 border-white hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                                 <!-- Fun "Sticker" Overlay -->
                                 <div class="absolute -bottom-6 -right-6 bg-orange-500 text-white p-6 rounded-2xl shadow-xl rotate-12 flex flex-col items-center">
                                     <svg class="w-10 h-10 mb-2" fill="currentColor" viewBox="0 0 24 24">
@@ -209,7 +222,7 @@
                             <div class="w-full lg:w-1/2 order-1 lg:order-2">
                                 <div class="relative group">
                                     <div class="absolute -inset-4 bg-slate-50 rounded-2xl -z-10 group-hover:scale-95 transition-transform duration-500"></div>
-                                    <img src="./assets/CoCap.jpg" alt="Colorado Capital" class="rounded-2xl shadow-xl w-full aspect-square object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                                    <img src="./assets/CoCap.jpg" alt="Colorado Capital" class="rounded-2xl shadow-xl w-full aspect-square object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                                 </div>
                             </div>
                         </div>
@@ -218,7 +231,7 @@
                             <div class="w-full lg:w-1/2">
                                 <div class="relative group">
                                     <div class="absolute -inset-4 bg-slate-50 rounded-2xl -z-10 group-hover:scale-95 transition-transform duration-500"></div>
-                                    <img src="./assets/fire_management_clean.png" alt="Fire Management Experience" class="rounded-2xl shadow-xl w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    <img src="./assets/fire_management_clean.png" alt="Fire Management Experience" class="rounded-2xl shadow-xl w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                                 </div>
                             </div>
                             <div class="w-full lg:w-1/2">
@@ -287,8 +300,61 @@
                             <div class="w-full lg:w-1/2 order-1 lg:order-2">
                                 <div class="relative group">
                                     <div class="absolute -inset-4 bg-slate-50 rounded-2xl -z-10 group-hover:scale-95 transition-transform duration-500"></div>
-                                    <img src="./assets/wildlife_heritage.png" alt="Teller County Wildlife and Heritage" class="rounded-2xl shadow-xl w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    <img src="./assets/wildlife_heritage.png" alt="Teller County Wildlife and Heritage" class="rounded-2xl shadow-xl w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                                 </div>
+                            </div>
+                        </div>
+                        <!-- Row 4: Local Control & Constitutional Rights -->
+                        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                            <div class="w-full lg:w-1/2">
+                                <div class="relative group">
+                                    <div
+                                        class="absolute -inset-4 bg-slate-50 rounded-2xl -z-10 group-hover:scale-95 transition-transform duration-500">
+                                    </div>
+                                    <img src="./assets/IMAG0963.jpg" alt="Dave Paul standing for constitutional principles"
+                                        class="rounded-2xl shadow-xl w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                                </div>
+                            </div>
+                            <div class="w-full lg:w-1/2">
+                                <div class="flex items-center space-x-2 mb-4">
+                                    <span class="h-px w-8 bg-campaign-gold"></span>
+                                    <span
+                                        class="text-campaign-gold font-bold uppercase tracking-widest text-xs">Liberty</span>
+                                </div>
+                                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 font-serif">Defending Our
+                                    Way of Life</h3>
+                                <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                                    Teller County decisions should be made in Teller County—not in Denver. Dave is a
+                                    fearless advocate for local control and constitutional principles.
+                                </p>
+                                <ul class="space-y-4 text-slate-700">
+                                    <li class="flex items-start space-x-3">
+                                        <svg class="w-6 h-6 text-campaign-gold flex-shrink-0" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                            </path>
+                                        </svg>
+                                        <div>
+                                            <span class="font-bold text-slate-900">2nd Amendment Sanctuary:</span>
+                                            Upholding Teller County’s status as a sanctuary for law-abiding gun owners
+                                            against unconstitutional state mandates.
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <svg class="w-6 h-6 text-campaign-gold flex-shrink-0" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                            </path>
+                                        </svg>
+                                        <div>
+                                            <span class="font-bold text-slate-900">Fighting State Mandates:</span>
+                                            Resisting out-of-touch policies from Denver that threaten our local
+                                            businesses, water rights, and land use.
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -324,7 +390,7 @@
                                 <div class="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
                                     <div class="flex flex-col lg:flex-row">
                                         <div class="lg:w-2/5 relative h-72 lg:h-auto overflow-hidden">
-                                            <img src="./assets/Amine.jpg" alt="Dave Paul at mining site" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                            <img src="./assets/Amine.jpg" alt="Dave Paul at mining site" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                                             <div class="absolute inset-0 bg-gradient-to-r from-campaign-blue/20 to-transparent"></div>
                                         </div>
                                         <div class="lg:w-3/5 p-8 md:p-12 flex flex-col justify-center">
@@ -358,7 +424,7 @@
                                 <div class="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
                                     <div class="flex flex-col lg:flex-row-reverse">
                                         <div class="lg:w-2/5 relative h-72 lg:h-auto overflow-hidden">
-                                            <img src="./assets/Station1.jpg" alt="NETCO Fire Station" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                            <img src="./assets/Station1.jpg" alt="NETCO Fire Station" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                                             <div class="absolute inset-0 bg-gradient-to-l from-campaign-blue/20 to-transparent"></div>
                                         </div>
                                         <div class="lg:w-3/5 p-8 md:p-12 flex flex-col justify-center">
@@ -392,7 +458,7 @@
                                 <div class="lg:col-span-2 group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
                                     <div class="flex flex-col lg:flex-row-reverse">
                                         <div class="lg:w-2/5 relative h-64 lg:h-auto overflow-hidden">
-                                            <img src="./assets/cci.jpg" alt="CCI Leadership" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                            <img src="./assets/cci.jpg" alt="CCI Leadership" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                                             <div class="absolute inset-0 bg-blue-900/10"></div>
                                         </div>
                                         <div class="lg:w-3/5 p-8 md:p-10">
@@ -410,7 +476,7 @@
                                 <div class="lg:col-span-2 group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
                                     <div class="flex flex-col lg:flex-row">
                                         <div class="lg:w-2/5 relative h-64 lg:h-auto overflow-hidden">
-                                            <img src="./assets/Uaadc.jpg" alt="Upper Arkansas Council" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                            <img src="./assets/Uaadc.jpg" alt="Upper Arkansas Council" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                                             <div class="absolute inset-0 bg-blue-900/10"></div>
                                         </div>
                                         <div class="lg:w-3/5 p-8 md:p-10">
@@ -430,7 +496,7 @@
                                         </div>
                                         <div>
                                             <h4 class="font-bold text-slate-900">Judicial Performance</h4>
-                                            <p class="text-xs text-slate-500 font-bold uppercase tracking-tighter"> Commissioner (2019–present)</p>
+                                            <p class="text-xs text-slate-600 font-bold uppercase tracking-tighter"> Commissioner (2019–present)</p>
                                         </div>
                                     </div>
                                     <p class="text-slate-600 text-sm leading-relaxed"> Appointed by House Minority Leader Patrick Neville, and re-appointed by the late Hugh McKean, for the Fourth Judicial District. Commissioners conduct interviews, observe Judges on the bench, and analyze surveys and case work of County and District Court Judges for determining retention recommendations for reporting in the Blue Book. </p>
@@ -445,7 +511,7 @@
                                         </div>
                                         <div>
                                             <h4 class="font-bold text-slate-900">Gaming Impact Grant</h4>
-                                            <p class="text-xs text-slate-500 font-bold uppercase tracking-tighter"> Committee Member (2012–2018)</p>
+                                            <p class="text-xs text-slate-600 font-bold uppercase tracking-tighter"> Committee Member (2012–2018)</p>
                                         </div>
                                     </div>
                                     <p class="text-slate-600 text-sm leading-relaxed"> Appointed by Gov. John Hickenlooper to represent Teller and contiguous counties. Chaired by the Executive Director of DOLA, this committee distributed over $5 million in annual impact grants. Teller County applicants typically garnered over $2 million annually from this program during Dave's tenure. </p>
@@ -471,7 +537,7 @@
                                 <div class="lg:col-span-3 group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
                                     <div class="flex flex-col lg:flex-row">
                                         <div class="lg:w-1/3 relative h-64 lg:h-auto overflow-hidden">
-                                            <img src="./assets/RotaryTerrace.jpg" alt="Rotary Terrace" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                            <img src="./assets/RotaryTerrace.jpg" alt="Rotary Terrace" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                                             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                                                 <p class="text-white text-[10px] font-black uppercase tracking-widest"> Civic Pride: Centennial Project</p>
                                             </div>
@@ -490,22 +556,22 @@
                                 </div>
                                 <!-- Small Record Cards -->
                                 <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:bg-white transition-colors">
-                                    <h5 class="font-black text-slate-900 text-xs uppercase tracking-widest mb-3">The Resource Exchange (TRE)</h5>
+                                    <h4 class="font-black text-slate-900 text-xs uppercase tracking-widest mb-3">The Resource Exchange (TRE)</h4>
                                     <p class="text-slate-600 text-[13px] leading-relaxed mb-4">Board Director for the $40M non-profit serving regional disability communities. Member of the nominating and legislative committees, providing oversight for 300+ employees and the owned facility at 6385 Corporate Drive.</p>
                                     <span class="text-[10px] font-bold text-campaign-blue uppercase tracking-widest">2020–PRESENT</span>
                                 </div>
                                 <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:bg-white transition-colors">
-                                    <h5 class="font-black text-slate-900 text-xs uppercase tracking-widest mb-3">Pikes Peak Workforce (PPWFC)</h5>
+                                    <h4 class="font-black text-slate-900 text-xs uppercase tracking-widest mb-3">Pikes Peak Workforce (PPWFC)</h4>
                                     <p class="text-slate-600 text-[13px] leading-relaxed mb-4">Executive Board Chair overseeing a $7M budget and 70 employees. Navigated the complex federal transition from WIA to WIOA, establishing the center as an award-winning example for Colorado.</p>
                                     <span class="text-[10px] font-bold text-campaign-blue uppercase tracking-widest">2013–2017</span>
                                 </div>
                                 <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:bg-white transition-colors">
-                                    <h5 class="font-black text-slate-900 text-xs uppercase tracking-widest mb-3"> Woodland West Water Users</h5>
+                                    <h4 class="font-black text-slate-900 text-xs uppercase tracking-widest mb-3"> Woodland West Water Users</h4>
                                     <p class="text-slate-600 text-[13px] leading-relaxed mb-4">Board President. Managed water rights, system maintenance, and delivery. Successfully perfected ownership of source water through land and water right acquisitions.</p>
                                     <span class="text-[10px] font-bold text-campaign-blue uppercase tracking-widest">9 YEARS TOTAL</span>
                                 </div>
                                 <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:bg-white transition-colors">
-                                    <h5 class="font-black text-slate-900 text-xs uppercase tracking-widest mb-3">CTSI Workers Comp Board</h5>
+                                    <h4 class="font-black text-slate-900 text-xs uppercase tracking-widest mb-3">CTSI Workers Comp Board</h4>
                                     <p class="text-slate-600 text-[13px] leading-relaxed mb-4">Elected Director providing fiscal oversight of insurance operations, claims, training, and prudent investment of significant reserves within statutory requirements.</p>
                                     <span class="text-[10px] font-bold text-campaign-blue uppercase tracking-widest">2012–2018</span>
                                 </div>
@@ -522,7 +588,7 @@
                             </div>
                             <div>
                                 <h3 class="text-3xl font-bold text-slate-900 font-serif">Private Sector Success</h3>
-                                <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mt-1">Building Value in Teller County</p>
+                                <p class="text-slate-600 font-bold uppercase tracking-widest text-xs mt-1">Building Value in Teller County</p>
                             </div>
                             <div class="h-px bg-slate-200 flex-grow"></div>
                         </div>
@@ -668,7 +734,7 @@
                         <!-- Right: The Big Tent Spotlight -->
                         <div class="relative sticky top-24">
                             <div class="rounded-3xl overflow-hidden shadow-2xl bg-campaign-blue text-white mb-8">
-                                <img src="./assets/IMAG0489(1).jpg" alt="Dave Paul at Republican Event" class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500" />
+                                <img src="./assets/IMAG0489(1).jpg" alt="Dave Paul at Republican Event" class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                                 <div class="p-8 md:p-10">
                                     <div class="inline-block px-3 py-1 bg-campaign-gold text-slate-900 text-[10px] font-black uppercase tracking-widest rounded mb-6"> Master Fundraiser</div>
                                     <h3 class="text-3xl font-bold font-serif mb-4 text-white">The "Big Tent" Legacy</h3>
@@ -688,7 +754,7 @@
                     <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                         <div class="w-full lg:w-1/2">
                             <div class="relative group">
-                                <img src="./assets/TREdayCap.jpg" alt="Dave Paul at the Capitol" class="rounded-2xl shadow-xl w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <img src="./assets/TREdayCap.jpg" alt="Dave Paul at the Capitol" class="rounded-2xl shadow-xl w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                             </div>
                         </div>
                         <div class="w-full lg:w-1/2">
@@ -731,8 +797,8 @@
                                     </div>
                                 </div>
                                 <div class="max-w-[18rem]">
-                                    <h4 class="text-slate-900 font-black uppercase tracking-wider text-sm mb-1">Put the wallet away.</h4>
-                                    <p class="text-slate-500 text-xs italic">We aren't running on PAC money. We're running on boots, tires, and very loud kitchen table conversations.</p>
+                                    <h3 class="text-slate-900 font-black uppercase tracking-wider text-sm mb-1">Put the wallet away.</h3>
+                                    <p class="text-slate-600 text-xs italic">We aren't running on PAC money. We're running on boots, tires, and very loud kitchen table conversations.</p>
                                 </div>
                             </div>
                         </div>
@@ -890,7 +956,7 @@
                         <p class="text-slate-600 text-lg mb-8">Your vote is your voice in our community's future. Join us in bringing common-sense leadership back to Teller County.</p>
                         <div class="flex items-center justify-center space-x-4 text-slate-400">
                             <span class="h-px w-8 bg-slate-200"></span>
-                            <p class="text-slate-500 italic font-serif">"I am asking for your vote to preserve our heritage and protect our future."</p>
+                            <p class="text-slate-600 italic font-serif">"I am asking for your vote to preserve our heritage and protect our future."</p>
                             <span class="h-px w-8 bg-slate-200"></span>
                         </div>
                     </div>
@@ -900,13 +966,17 @@
                             <h3 class="text-2xl font-bold text-slate-900 mb-8 font-serif">When to Vote</h3>
                             <div class="space-y-8 flex-grow">
                                 <div class="flex items-start gap-6">
-                                    <div class="w-16 h-16 bg-red-50 rounded-2xl flex flex-col items-center justify-center text-campaign-red border border-red-100 flex-shrink-0">
+                                    <div
+                                        class="w-16 h-16 bg-red-50 rounded-2xl flex flex-col items-center justify-center text-campaign-red border border-red-100 flex-shrink-0 shadow-sm">
                                         <span class="text-[10px] font-bold uppercase tracking-tighter">June</span>
                                         <span class="text-2xl font-black leading-none">30</span>
                                     </div>
                                     <div>
-                                        <h4 class="text-xl font-bold text-slate-900 mb-1">Statewide Primary</h4>
-                                        <p class="text-slate-600 leading-relaxed">The primary election to select party nominees. Cast your vote for <span class="font-bold text-campaign-blue">Dave Paul</span> on your Republican ballot to ensure he moves forward to the general election. </p>
+                                        <h4 class="text-xl font-bold text-slate-900 mb-1">Republican Primary</h4>
+                                        <p class="text-slate-600 leading-relaxed italic mb-1 uppercase text-xs font-black tracking-widest text-campaign-red">The Real Race</p>
+                                        <p class="text-slate-600 leading-relaxed">
+                                            In Teller County, the <span class="font-bold text-slate-900">primary is everything</span>. Ensure you are registered as a Republican or Unaffiliated to cast your ballot for <span class="font-bold text-campaign-blue">Dave Paul</span> and keep conservative leadership in the driver's seat.
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="flex items-start gap-6">
@@ -921,7 +991,7 @@
                                 </div>
                             </div>
                             <div class="mt-10 pt-8 border-t border-slate-100">
-                                <p class="text-slate-500 text-sm italic"> Note: Dates are subject to final certification by the Colorado Secretary of State. </p>
+                                <p class="text-slate-600 text-sm italic"> Note: Dates are subject to final certification by the Colorado Secretary of State. </p>
                             </div>
                         </div>
                         <!-- Logistics Card -->
@@ -987,16 +1057,22 @@
                             <p class="text-slate-400 max-w-sm mb-6 leading-relaxed"> Dedicated to the people of Teller County, the land we love, and the conservative values that keep us strong. </p>
                             <div class="flex space-x-4">
                                 <!-- Social Icons -->
-                                <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:bg-campaign-blue hover:text-white transition-all">
+                                <a href="http://facebook.com/trustdavepaul" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:bg-campaign-blue hover:text-white transition-all">
                                     <span class="sr-only">Facebook</span>
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
                                     </svg>
                                 </a>
+                                <a href="http://x.com/trustdavepaul" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:bg-campaign-blue hover:text-white transition-all">
+                                    <span class="sr-only">X (Twitter)</span>
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.487h2.039L6.486 3.24H4.298l13.311 17.399z" />
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                         <div>
-                            <h5 class="text-campaign-gold font-bold uppercase tracking-wider mb-6 text-sm">Quick Links </h5>
+                            <h4 class="text-campaign-gold font-bold uppercase tracking-wider mb-6 text-sm">Quick Links </h4>
                             <ul class="space-y-3 text-slate-400 text-sm">
                                 <li>
                                     <a href="#about" class="hover:text-white transition-colors">About</a>
@@ -1022,7 +1098,7 @@
                             </ul>
                         </div>
                         <div>
-                            <h5 class="text-campaign-gold font-bold uppercase tracking-wider mb-6 text-sm">Contact</h5>
+                            <h4 class="text-campaign-gold font-bold uppercase tracking-wider mb-6 text-sm">Contact</h4>
                             <ul class="space-y-3 text-slate-400 text-sm">
                                 <li class="flex items-start">
                                     <svg class="w-5 h-5 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1032,9 +1108,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+                    <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
                         <div class="mb-4 md:mb-0"> &copy; 2026 Dave Paul for Commissioner. All rights reserved. </div>
-                        <div class="border border-slate-700 px-4 py-2 rounded uppercase tracking-widest text-[10px] hover:border-slate-500 transition-colors"> Paid for by Dave Paul for Commissioner </div>
+                        <div class="border border-slate-700 px-4 py-2 rounded uppercase tracking-widest text-[10px] hover:border-slate-300 transition-colors"> Paid for by Dave Paul for Commissioner </div>
                     </div>
                 </div>
             </footer>
