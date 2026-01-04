@@ -5,12 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Dave Paul for Teller County Commissioner</title>
         <meta name="description" content="Dave Paul for Teller County Commissioner. Protecting our heritage, watching over your taxes, and building a stronger future for the community we call home." />
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap">
-        <link rel="preload" as="image" href="./assets/hero.avif" fetchpriority="high">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+        </style>
+        <link rel="preload" as="image" href="./assets/hero_mobile.avif" media="(max-width: 768px)" fetchpriority="high">
+        <link rel="preload" as="image" href="./assets/hero.avif" media="(min-width: 769px)" fetchpriority="high">
     </head>
     <body class="bg-gray-50 text-slate-800 antialiased font-sans">
         <a href="#main" class="skip-link">Skip to main content</a>
@@ -61,6 +60,7 @@
             <section class="relative h-screen flex items-center justify-center overflow-hidden">
                 <div class="absolute inset-0 z-0">
                     <picture>
+                        <source media="(max-width: 768px)" srcset="./assets/hero_mobile.avif" type="image/avif">
                         <source srcset="./assets/hero.avif" type="image/avif">
                         <img src="./assets/hero_optimized.jpg" alt="Teller County Landscape" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-[2000ms]" fetchpriority="high" />
                     </picture>
@@ -96,6 +96,7 @@
                             <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-campaign-blue/10 rounded-full blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
                             <div class="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/5 group-hover:rotate-0 transition-transform duration-500">
                                 <picture>
+                                    <source media="(max-width: 640px)" srcset="./assets/HeadShot_mobile.avif" type="image/avif">
                                     <source srcset="./assets/HeadShot.avif" type="image/avif">
                                     <img src="./assets/HeadShot_optimized.jpg" alt="Dave Paul" class="w-full object-cover aspect-[4/5] group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                                 </picture>
