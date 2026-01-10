@@ -56,6 +56,7 @@
                         <!-- Desktop Menu -->
                         <div class="hidden lg:flex space-x-8 items-center">
                             <a href="#about" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">About</a>
+                            <a href="#petition" class="px-4 py-2 bg-campaign-red text-white font-bold rounded-lg border-b-2 border-red-900 active:border-b-0 active:translate-y-0.5 transition-all text-sm shadow-sm hover:shadow-md hover:bg-red-800">Sign Petition</a>
                             <a href="#vision" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">Vision</a>
                             <a href="#experience" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">Experience</a>
                             <a href="#party-leadership" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">Leadership</a>
@@ -78,6 +79,7 @@
                 <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-100 shadow-lg animate-fade-in">
                     <div class="px-4 py-6 space-y-4">
                         <a href="#about" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">About</a>
+                        <a href="#petition" class="inline-block my-2 px-4 py-2 bg-campaign-red text-white font-bold rounded-lg border-b-2 border-red-900 active:border-b-0 active:translate-y-0.5 transition-all text-sm shadow-sm text-center">Sign Petition</a>
                         <a href="#vision" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">Vision</a>
                         <a href="#experience" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">Experience</a>
                         <a href="#party-leadership" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">Leadership</a>
@@ -118,9 +120,80 @@
                             <a href="#about" class="px-8 sm:px-10 py-4 sm:py-5 bg-campaign-gold hover:bg-yellow-500 text-campaign-blue font-bold rounded-lg shadow-lg hover:shadow-xl transition-all text-lg sm:text-xl border-b-4 border-yellow-600 active:border-b-0 active:translate-y-1 text-center w-full sm:w-auto">
                                 Meet Dave
                             </a>
-                            <a href="#vision" class="px-8 sm:px-10 py-4 sm:py-5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg backdrop-blur-md transition-all text-lg sm:text-xl border border-white/30 text-center w-full sm:w-auto hover:backdrop-blur-lg">
-                                The Platform
+                            <a href="#petition" class="px-8 sm:px-10 py-4 sm:py-5 bg-campaign-red hover:bg-red-800 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all text-lg sm:text-xl border-b-4 border-red-950 active:border-b-0 active:translate-y-1 text-center w-full sm:w-auto">
+                                Sign Petition
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Petition CTA Section -->
+            <section id="petition" class="relative py-20 bg-campaign-red scroll-mt-20 overflow-hidden">
+                <!-- Background Building Image with Overlay -->
+                <div class="absolute inset-0 z-0">
+                    <img src="./assets/cowhand.jpg" alt="" class="w-full h-full object-cover opacity-15 grayscale" aria-hidden="true" />
+                    <div class="absolute inset-0 bg-linear-to-r from-campaign-red via-campaign-red/95 to-transparent"></div>
+                </div>
+
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+                        <div class="lg:col-span-7">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-campaign-gold/10 text-campaign-gold rounded-full border border-campaign-gold/30 mb-6 animate-pulse-slow">
+                                <span class="w-2 h-2 rounded-full bg-campaign-gold"></span>
+                                <span class="text-[10px] font-black uppercase tracking-widest">Urgent: Ballot Access</span>
+                            </div>
+                            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-serif">
+                                Help Put Dave <br />
+                                <span class="text-campaign-gold italic">on the Ballot</span>
+                            </h2>
+                            <p class="text-xl md:text-2xl text-gray-100 font-medium leading-relaxed mb-8">
+                                We need your help to get Dave Paul on the ballot! This is our first step to ensuring common sense leadership for Teller County.
+                            </p>
+                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 mb-8">
+                                <p class="text-lg md:text-xl text-white leading-relaxed">
+                                    <span class="text-campaign-gold font-bold">Sign the Petition:</span> Petitions are available during business hours at the <span class="font-bold border-b-2 border-campaign-gold pb-1">Historic Cowhand</span> in downtown Woodland Park.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-8 mb-10">
+                                <div class="flex items-center gap-3 text-white/90">
+                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
+                                        <svg class="w-5 h-5 text-campaign-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-[10px] uppercase tracking-widest opacity-60">Location</span>
+                                        <span class="font-bold">209 W Midland Ave</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 text-white/90">
+                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
+                                        <svg class="w-5 h-5 text-campaign-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-[10px] uppercase tracking-widest opacity-60">Hours</span>
+                                        <span class="font-bold">Mon–Sat, 10am–5pm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- New Action Button -->
+                            <a href="https://maps.google.com/?q=209+W+Midland+Ave,+Woodland+Park,+CO" target="_blank" class="inline-block px-10 py-5 bg-campaign-gold hover:bg-yellow-500 text-campaign-blue font-bold rounded-lg shadow-lg hover:shadow-xl transition-all text-xl border-b-4 border-yellow-600 active:border-b-0 active:translate-y-1 text-center w-full sm:w-auto">
+                                Get Directions to Sign
+                            </a>
+                        </div>
+                        <div class="hidden lg:block lg:col-span-5 relative mt-12 lg:mt-0">
+                            <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 hover:rotate-0 transition-transform duration-500">
+                                <img src="./assets/cowhand.jpg" alt="The Historic Cowhand Building" class="w-full h-auto" />
+                                <div class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent flex items-end p-6">
+                                    <div class="text-white">
+                                        <p class="text-[10px] uppercase tracking-widest opacity-80 mb-1">Woodland Park Landmark</p>
+                                        <p class="text-sm font-black">Historic Cowhand Building</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Decorative elements -->
+                            <div class="absolute -top-12 -right-12 w-48 h-48 bg-campaign-gold/10 rounded-full blur-3xl"></div>
+                            <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-campaign-blue/40 rounded-full blur-3xl"></div>
                         </div>
                     </div>
                 </div>
@@ -382,7 +455,7 @@
                 </div>
             </section>
             <!-- Experience Section -->
-            <section id="experience" class="py-24 bg-slate-50 relative scroll-mt-20">
+            <section id="experience" class="py-24 bg-slate-50 relative scroll-mt-20 overflow-hidden">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <!-- Section Header -->
                     <div class="text-center mb-20">
