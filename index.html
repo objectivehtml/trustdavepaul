@@ -60,7 +60,7 @@
                         <!-- Desktop Menu -->
                         <div class="hidden lg:flex space-x-8 items-center">
                             <a href="#about" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">About</a>
-                            <a v-if="upcomingEvents.length > 0" href="#events" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">Events</a>
+                            <a href="#events" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">Events</a>
                             <a href="#vision" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">Vision</a>
                             <a href="#experience" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">Experience</a>
                             <a href="#party-leadership" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">Leadership</a>
@@ -84,7 +84,7 @@
                 <div v-if="mobileMenuOpen" class="lg:hidden bg-white border-b border-gray-100 shadow-lg animate-fade-in">
                     <div class="px-4 py-6 space-y-4">
                         <a href="#about" @click="mobileMenuOpen = false" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">About</a>
-                        <a v-if="upcomingEvents.length > 0" href="#events" @click="mobileMenuOpen = false" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">Events</a>
+                        <a href="#events" @click="mobileMenuOpen = false" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">Events</a>
                         <a href="#petition" @click="mobileMenuOpen = false" class="inline-block my-2 px-4 py-2 bg-campaign-red text-white font-bold rounded-lg border-b-2 border-red-900 active:border-b-0 active:translate-y-0.5 transition-all text-sm shadow-sm text-center">Petition Location</a>
                         <a href="#vision" @click="mobileMenuOpen = false" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">Vision</a>
                         <a href="#experience" @click="mobileMenuOpen = false" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">Experience</a>
@@ -266,13 +266,24 @@
             </section>
             
             <!-- Events Section -->
-            <section id="events" v-if="upcomingEvents.length > 0" class="py-24 bg-slate-50 relative border-b border-slate-200 scroll-mt-20 transition-all duration-500">
+            <section id="events" class="py-24 bg-slate-50 relative border-b border-slate-200 scroll-mt-20 transition-all duration-500">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-16">
                         <span class="text-campaign-red font-bold tracking-widest uppercase text-xs mb-2 block">Mark Your Calendar</span>
                         <h2 class="text-3xl md:text-5xl font-bold text-campaign-blue font-serif">Upcoming Events</h2>
                     </div>
                     <div class="max-w-4xl mx-auto space-y-6">
+                        <!-- Compact Empty State -->
+                        <div v-if="upcomingEvents.length === 0" class="max-w-2xl mx-auto bg-white rounded-3xl p-8 border border-slate-100 shadow-sm text-center">
+                            <div class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 mx-auto mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">More Events Coming Soon</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">We currently do not have any events scheduled. Check back often for updates!</p>
+                        </div>
+
                         <div v-for="event in upcomingEvents" :key="event.id" class="group bg-white rounded-[2.5rem] p-6 md:p-10 border border-slate-100 shadow-sm relative overflow-hidden">
                             <!-- Subtle Warm Accent -->
                             <div class="absolute top-0 right-0 w-48 h-48 bg-amber-50 rounded-full -mr-24 -mt-24 blur-3xl transition-colors duration-1000"></div>
@@ -329,6 +340,24 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media CTA -->
+                    <div class="mt-16 text-center">
+                        <div class="inline-flex flex-col items-center p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm max-w-2xl mx-auto">
+                            <h4 class="text-xl font-bold text-slate-900 mb-2">Follow Dave on Social Media</h4>
+                            <p class="text-slate-600 mb-6 text-sm">Follow Dave on social media for more upcoming events and real-time updates from the campaign trail.</p>
+                            <div class="flex flex-wrap justify-center gap-4">
+                                <a href="http://facebook.com/trustdavepaul" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-[#1877F2] hover:shadow-lg hover:-translate-y-0.5 text-white font-bold rounded-xl transition-all text-sm">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                                    Facebook
+                                </a>
+                                <a href="http://x.com/trustdavepaul" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 hover:shadow-lg hover:-translate-y-0.5 text-white font-bold rounded-xl transition-all text-sm">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.487h2.039L6.486 3.24H4.298l13.311 17.399z"/></svg>
+                                    Follow on X
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1369,7 +1398,7 @@
                                 <li>
                                     <a href="#about" class="hover:text-white transition-colors">About</a>
                                 </li>
-                                <li v-if="upcomingEvents.length > 0">
+                                <li>
                                     <a href="#events" class="hover:text-white transition-colors">Events</a>
                                 </li>
                                 <li>
