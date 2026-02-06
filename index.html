@@ -284,7 +284,7 @@
                             <p class="text-slate-600 text-sm leading-relaxed">We currently do not have any events scheduled. Check back often for updates!</p>
                         </div>
 
-                        <div v-for="event in upcomingEvents" :key="event.id" class="group bg-white rounded-[2.5rem] p-6 md:p-10 border border-slate-100 shadow-sm relative overflow-hidden">
+                        <div v-for="(event, i) in upcomingEvents" :key="i" class="group bg-white rounded-[2.5rem] p-6 md:p-10 border border-slate-100 shadow-sm relative overflow-hidden">
                             <!-- Subtle Warm Accent -->
                             <div class="absolute top-0 right-0 w-48 h-48 bg-amber-50 rounded-full -mr-24 -mt-24 blur-3xl transition-colors duration-1000"></div>
                             
