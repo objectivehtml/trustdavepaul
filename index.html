@@ -67,7 +67,6 @@
 
                             <a href="#volunteer" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">Volunteer</a>
                             <a href="#vote" class="nav-link text-slate-600 hover:text-campaign-blue font-medium transition-colors">Voting Info</a>
-                            <a href="#petition" class="px-4 py-2 bg-campaign-red text-white font-bold rounded-lg border-b-2 border-red-900 active:border-b-0 active:translate-y-0.5 transition-all text-sm shadow-sm hover:shadow-md hover:bg-red-800">Petition</a>
                         </div>
                         <!-- Mobile Menu Button -->
                         <div class="lg:hidden">
@@ -85,7 +84,6 @@
                     <div class="px-4 py-6 space-y-4">
                         <a href="#about" @click="mobileMenuOpen = false" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">About</a>
                         <a href="#events" @click="mobileMenuOpen = false" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">Events</a>
-                        <a href="#petition" @click="mobileMenuOpen = false" class="inline-block my-2 px-4 py-2 bg-campaign-red text-white font-bold rounded-lg border-b-2 border-red-900 active:border-b-0 active:translate-y-0.5 transition-all text-sm shadow-sm text-center">Petition Location</a>
                         <a href="#vision" @click="mobileMenuOpen = false" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">Vision</a>
                         <a href="#experience" @click="mobileMenuOpen = false" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">Experience</a>
                         <a href="#party-leadership" @click="mobileMenuOpen = false" class="nav-link block text-slate-600 hover:text-campaign-blue font-medium transition-colors py-2">Leadership</a>
@@ -126,98 +124,11 @@
                             <a href="#about" class="px-8 sm:px-10 py-4 sm:py-5 bg-campaign-gold hover:bg-yellow-500 text-campaign-blue font-bold rounded-lg shadow-lg hover:shadow-xl transition-all text-lg sm:text-xl border-b-4 border-yellow-600 active:border-b-0 active:translate-y-1 text-center w-full sm:w-auto">
                                 Meet Dave
                             </a>
-                            <a href="#petition" class="px-8 sm:px-10 py-4 sm:py-5 bg-campaign-red hover:bg-red-800 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all text-lg sm:text-xl border-b-4 border-red-950 active:border-b-0 active:translate-y-1 text-center w-full sm:w-auto">
-                                Petition Location
-                            </a>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <!-- Petition CTA Section -->
-            <section id="petition" class="relative lg:py-20 bg-campaign-red scroll-mt-20 overflow-hidden">
-                <!-- Background Building Image with Overlay -->
-                <div class="absolute inset-0 z-0">
-                    <img src="./assets/cowhand.webp" alt="" class="w-full h-full object-cover opacity-15 grayscale" aria-hidden="true" />
-                    <div class="absolute inset-0 bg-linear-to-r from-campaign-red via-campaign-red/95 to-transparent"></div>
-                </div>
-
-                <div class="relative z-10 max-w-7xl mx-auto">
-                    <div class="grid lg:grid-cols-12 md:gap-12 lg:gap-12 items-center">
-                        <div class="lg:col-span-4 xl:col-span-5 relative mb-12 lg:mb-0 lg:order-2">
-                            <div class="relative z-10 lg:rounded-3xl overflow-hidden shadow-2xl lg:border-4 border-white/20 hover:rotate-0 transition-transform duration-500">
-                                <img src="./assets/cowhand.webp" alt="The Historic Cowhand Building" class="w-full h-auto" />
-                                <div class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent flex items-end p-6">
-                                    <div class="text-white">
-                                        <p class="text-[10px] uppercase tracking-widest opacity-80 mb-1">Woodland Park Landmark</p>
-                                        <p class="text-sm font-black">Historic Cowhand Building</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Decorative elements -->
-                            <div class="absolute -top-12 -right-12 w-48 h-48 bg-campaign-gold/10 rounded-full blur-3xl"></div>
-                            <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-campaign-blue/40 rounded-full blur-3xl"></div>
-                        </div>
-
-                        <div class="lg:col-span-7 lg:order-1 pb-6 px-6 lg:px-8">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-campaign-gold/10 text-campaign-gold rounded-full border border-campaign-gold/30 mb-6 animate-pulse-slow">
-                                <span class="w-2 h-2 rounded-full bg-campaign-gold"></span>
-                                <span class="text-[10px] font-black uppercase tracking-widest">Urgent: Ballot Access</span>
-                            </div>
-                            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-serif">
-                                Help Put Dave <br />
-                                <span class="text-campaign-gold italic">on the Ballot</span>
-                            </h2>
-                            <p class="text-xl md:text-2xl text-gray-100 font-medium leading-relaxed mb-8">
-                                We need your help to get Dave Paul on the ballot! This is our first step to ensuring common sense leadership for Teller County.
-                            </p>
-                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 mb-8">
-                                <p class="text-lg md:text-xl text-white leading-relaxed">
-                                    <span class="text-campaign-gold font-bold">Sign the Petition:</span> Petitions are available during business hours at the <span class="font-bold border-b-2 border-campaign-gold pb-1">Historic Cowhand</span> in downtown Woodland Park.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap gap-8 mb-10">
-                                <div class="flex items-start gap-3 text-white/90">
-                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20 shrink-0">
-                                        <svg class="w-5 h-5 text-campaign-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-[10px] uppercase tracking-widest opacity-60">Location</span>
-                                        <span class="font-bold">209 W Midland Ave</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3 text-white/90">
-                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20 shrink-0">
-                                        <svg class="w-5 h-5 text-campaign-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-[10px] uppercase tracking-widest opacity-60">Hours</span>
-                                        <span class="font-bold text-sm">Mon, Thu–Sat: 10am–5pm</span>
-                                        <span class="font-bold text-sm">Sun: 11am–4pm</span>
-                                        <span class="text-xs opacity-80 mt-1">Closed Tue & Wed</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3 text-white/90 w-full sm:w-auto">
-                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20 shrink-0">
-                                        <svg class="w-5 h-5 text-campaign-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-[10px] uppercase tracking-widest opacity-60">Reach Out</span>
-                                        <a href="tel:7196270696" class="font-bold hover:text-campaign-gold transition-colors">719.627.0696</a>
-                                        <span class="text-xs opacity-80 mt-1 max-w-[200px]">If you can't come to the Historic Cowhand, contact me and I'll come to you.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- New Action Button -->
-                            <a href="https://maps.google.com/?q=209+W+Midland+Ave,+Woodland+Park,+CO" target="_blank" class="inline-block px-10 py-5 bg-campaign-gold hover:bg-yellow-500 text-campaign-blue font-bold rounded-lg shadow-lg hover:shadow-xl transition-all text-xl border-b-4 border-yellow-600 active:border-b-0 active:translate-y-1 text-center w-full sm:w-auto">
-                                Get Directions
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
             <!-- About Section -->
             <section id="about" class="py-24 bg-white relative overflow-hidden scroll-mt-20">
                 <div id="main" tabindex="-1" class="sr-only">Main Content Start</div>
@@ -1107,27 +1018,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- Role 2: The Gatherers -->
-                        <div class="bg-white p-8 rounded-4xl border-2 border-slate-100 shadow-sm">
-                            <div class="w-14 h-14 bg-amber-50 text-amber-700 rounded-2xl flex items-center justify-center mb-6">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-4">The Petition Powerhouse</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Before we can win, we have to get on the ballot. It's the ultimate gatekeeper role for our campaign. We need volunteers to help gather signatures.</p>
-                            <ul class="space-y-2 text-xs font-bold text-slate-400">
-                                <li class="flex items-center gap-2">
-                                    <div class="w-1 h-1 bg-campaign-gold rounded-full"></div> SIGNATURE DRIVES
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <div class="w-1 h-1 bg-campaign-gold rounded-full"></div> STOREFRONT GATHERING
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <div class="w-1 h-1 bg-campaign-gold rounded-full"></div> EVENT TABLING
-                                </li>
-                            </ul>
-                        </div>
                         <!-- Role 3: Visuals -->
                         <div class="bg-white p-8 rounded-4xl border-2 border-slate-100 shadow-sm">
                             <div class="w-14 h-14 bg-red-50 text-campaign-red rounded-2xl flex items-center justify-center mb-6">
@@ -1234,11 +1124,6 @@
                         </div>
                     </div>
 
-                    <div class="my-12 bg-amber-50 border-l-8 border-amber-400 rounded-3xl p-8 md:p-10 shadow-sm">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-4 font-serif">Getting on the Primary Ballot is Job One!</h3>
-                        <p class="text-slate-700 mb-4">Our campaign starts NOW, and in order to collect petition signatures or sign to show your support, you must be 18 years of age, and a registered Republican in Teller County. We have until March 15 to reach our goal of 750 signatures. Watch this site and our social media for locations and events where you can add your support.</p>
-                        <p class="text-slate-700 mb-0"><strong>If you are not registered, or have temporarily lost your enthusiasm for the GOP, you still have time to register as a Republican. 22 days after registration, you can legally sign the petition!</strong></p>
-                    </div>
 
                     <div class="grid lg:grid-cols-2 gap-12">
                         <!-- Dates Card -->
@@ -1477,7 +1362,7 @@
                     </div>
                     <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
                         <div class="mb-4 md:mb-0"> &copy; 2026 Dave Paul for Commissioner. All rights reserved. </div>
-                        <div class="border border-slate-700 px-4 py-2 rounded uppercase tracking-widest text-[10px] hover:border-slate-300 transition-colors"> Paid for by Dave for Commissioner, Registered Agent Dave Paul</div>
+                        <div class="border border-slate-700 px-4 py-2 rounded uppercase tracking-widest text-[10px] hover:border-slate-300 transition-colors"> Paid for by Dave Paul for Commissioner, Registered Agent Dave Paul</div>
                     </div>
                 </div>
             </footer>
